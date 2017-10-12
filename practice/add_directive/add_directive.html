@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+<body>
+<!-- 
+	* new directive as attribute
+	* new directive as Element name
+ -->
+<div ng-app="myApp" ng-controller="myCtrl">
+	<p my-first-directive></p>
+	<p my-first-directive></p>
+	<input type="text" ng-model="fName">
+
+	<my-first-element></my-first-element>
+</div>
+
+
+</body>
+
+<script src="myApp.js"></script>
+<script src="myCtrl.js"></script>
+
+</html>

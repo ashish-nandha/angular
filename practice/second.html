@@ -2,22 +2,99 @@
 <html lang="en-US">
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
 <body>
+<!--
+	* Multiple controller 
+	* change color
+	* init multiple variable
+	* AngulatJS Object
+	* AngularJS Arrays
+	* AngularJS ng-repeat
+	* Validate User Input
+-->
+<div ng-app="myApp" >
+	
+	<div ng-controller="myCtrl">
+		First Name: <input type="text" ng-model="firstName">
+		Last Name: <input type="text" ng-model="lastName">
+		Last Name: <input type="text" ng-model="lastName"> <!-- with same name -->
+		<p>Full Name: {{firstName +" "+ lastName}}</p>
+	</div>
+	<div ng-controller="secondCtrl">
+		First Name: <input type="text" ng-model="firstName">
+		Last Name: <input type="text" ng-model="lastName">
+		Last Name: <input type="text" ng-model="lastName"> <!-- with same name -->
+		<p>Full Name: {{firstName +" "+ lastName}}</p>
+	</div>
+	<!-- change color -->
+	<div ng-init="myColor='blue'">
+		Enter color: <input type="text" style="background-color: {{myColor}}" ng-model="myColor" value="{{myColor}}">
+	</div>
+	<!-- init multiple variable --> 
+	<div ng-init="cost=5;qty=10">
+		<p>Total: <span>{{cost*qty}}</span></p>
+		<p>Total: <span ng-bind="{{cost*qty}}"></span></p>
+	</div>
+	<!-- AngulatJS Object -->
+	<div ng-init="person={firstName:'Ashish',lastName:'Nandha'}">
+		<p>First name: {{person.firstName}}</p>
+		<p ng-bind="person.lastName"></p>
+	</div>
 
-<div ng-app="myApp" ng-controller="myCtrl">
-	First Name: <input type="text" ng-model="firstName">
-	Last Name: <input type="text" ng-model="lastName">
+	<!-- AngulatJS Object -->
+	<div ng-init="myArray=[1,2,3]">
+		<p>Multiplication: {{myArray[0] * myArray[1] * myArray[2] }}</p>
+	</div>
 
-	<p>Full Name: {{firstName +" "+ lastName}}</p>
+	<!-- AngularJS ng-repeat -->
+	<div ng-init="names=['A', 'B', 'C']">
+		<ul>
+			<li ng-repeat="x in names">
+				{{x}}
+			</li>
+		</ul>
+		
+	</div>
+
+	<div ng-init="persons=[
+							{fName:'1.1', lName: '1.2'},
+							{fName:'2.1', lName: '2.2'},
+							{fName:'3.1', lName: '3.2'}]">
+		<ul>
+			<li ng-repeat="x in persons">
+				{{ x.fName +'-'+ x.lName}}
+			</li>
+		</ul>
+
+	</div>
+
+	<div ng-init="countryDetails=[
+									{name:'Jani',country:'Norway'},
+									{name:'Hege',country:'Sweden'},
+									{name:'Kai',country:'Denmark'} ]">
+		<ul>
+		   	<li ng-repeat="x in countryDetails">
+		    	{{ x.name + ', ' + x.country }}
+		  	</li>
+		</ul>
+	</div>	
+
+	<form ng-app="" name="myForm">
+	    Email:
+	    <input type="email" name="myAddress" ng-model="text">
+	    <span ng-show="myForm.myAddress.$error.email">Not a valid e-mail address</span>
+	</form>
 
 </div>
-
-
 </body>
 <script type="text/javascript">
 	var app = angular.module('myApp', []);
 	app.controller('myCtrl', function($scope) {
 		$scope.firstName ='Ashish';
-		$scope.lastName ='Nandha';
+		$scope.lastName  ='Nandha--';
+	});
+	app.controller('secondCtrl', function($scope) {
+		$scope.firstName ='Ashu';
+		$scope.lastName  ='Nandha--';
 	});
 </script>
 </html> 
