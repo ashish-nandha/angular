@@ -4,16 +4,17 @@
 <body>
 
 <div ng-app="">
-	<h1>ngModel.</h1>
+	<h1>ngModel:</h1>
 	<p>First Name : <input type="text" ng-model="firstName"></p>
-	<h1>Hello {{firstName}}</h1>
+	<h4>Hello {{firstName}}</h4>
 
-	<h1>ngInit.</h1>
+	<h1>ngInit:</h1>
 	<div ng-init="fullName='Ashish Nandha'">
 		<p>Full Name is: <span ng-bind="fullName"></span></p>
+		Input is: <input type="text" ng-model="fullName" name="">
 	</div>
 
-	<h1>Expression.</h1>
+	<h1>Expression:</h1>
 	<div ng-init="firstNumber=44">
 		<p>Expression: {{firstNumber + 5}}</p>
 	</div>
@@ -21,7 +22,7 @@
 	<h1>ngBind</h1>
 	<div ng-init="age=27">
 		<p>{{age}}</p>
-		<p ng-bind="age"></p>
+		<p ng-bind="age">asd</p>
 	</div>
 </div>
 

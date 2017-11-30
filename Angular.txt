@@ -1,0 +1,71 @@
+****ImP links
+// basic Agular tutorials
+https://www.w3schools.com/angular/default.asp
+https://www.tutorialspoint.com/developers_best_practices/what_is_practice.htm
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////
+Anjular JS
+
+-> basics of AngularJS: 
+	- directives
+	- expressions
+	- filters
+	- modules
+	- controllers.
+-> then learn - 
+	- Events, 
+	- DOM, 
+	- Forms, 
+	- Input, 
+	- Validation, 
+	- Http, and more.
+
+-> AngularJS v1.4.8
+
+Directives: ***
+-> AngularJS extends HTML attributes with Directives, and binds data to HTML with Expressions.
+-> AngularJS extends HTML with ng-directives. AngularJS directives are HTML attributes with an ng prefix. You can use data-ng-, instead of ng-, if you want to make your page HTML valid.
+	> The ng-app directive defines an AngularJS application.(Only one ng-app in html page)
+	> The ng-init directive initializes AngularJS application variables.
+	> The ng-model directive binds the value of HTML controls (input, select, textarea) to application data.
+	> The ng-bind directive binds application data to the HTML view. or use {{}}, e.g. {{name}}
+	> The ng-controller directive defines the controller.
+	> The ng-repeat directive repeats an HTML element.
+	
+AngularJS Modules: ***
+-> AngularJS modules define applications.
+-> var app = angular.module('myApp', []);
+
+AngularJS controllers: ***
+-> AngularJS controllers control applications.
+->	app.controller('myCtrl', function($scope) {
+		$scope.firstName= "John";
+		$scope.lastName= "Doe";
+	}); 
+	
+Expressions: *** (http://www.w3schools.com/angular/angular_expressions.asp)
+
+AngularJS Objects:
+
+AngularJS Arrays:
+
+	
+Expressions:
+-> AngularJS expressions are written inside double braces: {{ expression }}.
+
+
+
+
+
+========================
+calc
+
+https://www.google.co.in/?gfe_rd=cr&ei=b350WMzNKbHT8gew2qu4Bg&gws_rd=ssl#q=angularjs+calculator
+
+========================
+Node js
+
+https://www.google.co.in/?gfe_rd=cr&ei=-j9yWIuNDerH8AfUh4Fw#q=node+js+tutorial+w3schools
+https://www.tutorialspoint.com/nodejs/nodejs_first_application.htm
+
+
